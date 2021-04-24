@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class GiftController extends Controller
 {
-
+// test comment for github
 
     public function __construct()
     {
