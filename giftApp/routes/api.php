@@ -58,12 +58,12 @@ Route::get('/email/verify/{id}/{hash}', [APIVerificationController::class, 'veri
 
 //-------------------------------------------------------
 
-//gift route
-Route::resource('/gifts', GiftController::class);
+//gift route i update route
+Route::resource('/gifts', 'API\GiftController'::class);
 
-//review route
+//review route i update route
 Route::group(['prefix'=>'gifts'], function(){
-    Route::resource('/{gift}/reviews', ReviewController::class);
+    Route::resource('/{gift}/reviews', 'API\ReviewController'::class);
 });
 
 
