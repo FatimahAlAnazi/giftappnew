@@ -61,6 +61,10 @@ Route::get('/email/verify/{id}/{hash}', [APIVerificationController::class, 'veri
 //gift route i update route
 Route::resource('/gifts', 'API\GiftController'::class);
 
+
+//order route
+Route::resource('/orders', 'API\OrderController'::class);
+
 //review route i update route
 Route::group(['prefix'=>'gifts'], function(){
     Route::resource('/{gift}/reviews', 'API\ReviewController'::class);
