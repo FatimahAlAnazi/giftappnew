@@ -1,0 +1,156 @@
+gifts:
+Link: http://127.0.0.1:8000/api/gifts
+Method: POST
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct",
+    "data": {
+        "gift_image": [
+            "The gift image field is required."
+        ],
+        "price": [
+            "The price field is required."
+        ]
+    }
+}
+
+      get:
+Link: http://127.0.0.1:8000/api/gifts
+Method: GET
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": true,
+    "data": [],
+    "message": "All gifts"
+}
+
+ get:
+Link: http://127.0.0.1:8000/api/gifts/index
+Method: GET
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+}
+
+POST:
+Link: http://127.0.0.1:8000/api/gifts/store
+Method: POst
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+}
+
+
+
+get: 
+Link: http://127.0.0.1:8000/api/gifts/show
+Method: GET
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+}
+
+
+
+put: 
+Link: http://127.0.0.1:8000/api/gifts/update
+Method: put
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+
+}
+destroy
+: 
+Link: http://127.0.0.1:8000/api/gifts/destroy
+
+Method: put
+Input format JSON:
+{
+    "name":"atta mohammed",
+    "gift_image":" ",
+    "description":"bon produit",
+    "discount":"50% ",
+    "stock":"10",
+    "color":" black",
+    "warp_paper":"note paper",
+    "card":" vist"
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+
+}
+
