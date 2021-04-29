@@ -41,27 +41,34 @@ class RegisterController extends BassController
         return $this->sendResponse($success, 'You registered successfully');
     }
 
+//login with verification and admin
+public function login(Request $request)
+{
+    if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
-    //login with verification
-    public function login(Request $request)
-    {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-
-            $user = Auth::user();
-            if(Auth::user()->email_verified_at == null){
-                Auth::logout();
-                return $this->sendError('Unauthorised', ['error', 'Please verify your Email']);
-            }
-
-            $success['token'] = $user->createToken('fatimah')->accessToken;
-            $success['name'] = $user->name;
-
-            return $this->sendResponse($success, 'You logged in successfully');
-        } else {
-            return $this->sendError('Unauthorised', ['error', 'Unauthorised']);
+        $user = Auth::user();
+        if(Auth::user()->email_verified_at == null){
+            Auth::logout();
+            return $this->sendError('Unauthorised', ['error', 'Please verify your Email']);
         }
-    }
 
+        $success['token'] = $user->createToken('fatimah')->accessToken;
+        $success['name'] = $user->name;
+
+            if(Auth::user()->id == 1){
+                //force admin to change pasword for first login
+                if(Auth::user()->remember_token == null){
+                    return $this->sendError('Reset password is required', ['error', 'Please reset your password']);
+                }else{
+                    return $this->sendResponse($success, 'You logged in successfully as an admin');
+                }
+        } else{
+            return $this->sendResponse($success, 'You logged in successfully as a user');
+        }
+    } else {
+        return $this->sendError('Unauthorised', ['error', 'Unauthorised']);
+    }
+}
 
     //for logout
     protected function loggedOut(Request $request)
@@ -70,5 +77,3 @@ class RegisterController extends BassController
         return redirect(url('/login'));
     }
 }
-
-
