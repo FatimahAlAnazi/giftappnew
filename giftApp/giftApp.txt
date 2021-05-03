@@ -153,4 +153,95 @@ Output format JSON:
     "message": "Your information is not correct"
 
 }
+get:Reviews
+Link: http://127.0.0.1:8000/api/gifts/{gift}/reviews
+Method: GET
+Input format JSON:
+{
+   {"id":"1",
+    "gift_id":" ",
+    "customer_name":"bon produit",
+    "review":" ",
+    "star":"5"
+    
+ }
+}
+Output format JSON:
+{
+    "success": true,
+    "data": [],
+    "message": "All gifts"
+}
+
+http://127.0.0.1:8000/api/gifts/{gift}/reviews
+
+Method: POST
+Input format JSON:
+{
+    {"id":"1",
+    "gift_id":" ",
+    "customer_name":"bon produit",
+    "review":" ",
+    "star":"5"
+    
+ }
+}
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
+
+Method: get Review show 
+http://127.0.0.1:8000/api/gifts/{gift}/reviews/{review} 
+Input format JSON:
+{
+    {"id":"1",
+    "gift_id":" ",
+    "customer_name":"bon produit",
+    "review":" ",
+    "star":"5"
+    
+ }
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+
+}
+Method: PUT Review update
+http://127.0.0.1:8000/api/gifts/{gift}/reviews/{review} 
+Input format JSON:
+{
+    {"id":"1",
+    "gift_id":" ",
+    "customer_name":"bon produit",
+    "review":" ",
+    "star":"5"
+    
+ }
+
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
+
+Reviews methode :delete
+http://127.0.0.1:8000/api/gifts/{gift}/reviews/{review} 
+Method: GET
+Input format JSON:
+{
+   {"id":"1",
+    "gift_id":" ",
+    "customer_name":"bon produit",
+    "review":" ",
+    "star":"5"
+    
+ }
+}
+Output format JSON:
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
 

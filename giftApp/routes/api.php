@@ -68,6 +68,8 @@ Route::resource('/orders', 'API\OrderController'::class);
 //review route i update route
 Route::group(['prefix'=>'gifts'], function(){
     Route::resource('/{gift}/reviews', 'API\ReviewController'::class);
+
+
 });
 
 
