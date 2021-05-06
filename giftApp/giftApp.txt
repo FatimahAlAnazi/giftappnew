@@ -245,3 +245,87 @@ status:200 OK
 time:3.51 s
 size:4.54 KB
 
+get:Categorys
+Link: http://127.0.0.1:8000/api/categorys
+Method: GET
+Input format JSON:
+{
+   {"id":"1",
+    "name":" farh "
+    
+    
+ }
+}
+Output format JSON:
+{
+    "success": true,
+    "data": [],
+    "message": "All categorys"
+}
+
+http://127.0.0.1:8000/api/categorys
+
+Method: POST
+Input format JSON:
+{
+    {"id":"1",
+    "name":" farh "
+    
+    
+ }
+}
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
+
+Method: get category show 
+http://127.0.0.1:8000/api/categorys/{category}  
+Input format JSON:
+{
+    {"id":"1",
+    "name":" farh "
+    
+    
+ }
+}
+Output format JSON:
+{
+    "success": false,
+    "message": "Your information is not correct"
+
+}
+Method: PUT category update
+http://127.0.0.1:8000/api/categorys/{category} 
+Input format JSON:
+{
+    {"id":"1",
+    "name":" farh "
+    
+    
+ }
+    
+ }
+
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
+
+Category methode :delete
+http://127.0.0.1:8000/api/categorys/{category}
+Method: delete
+Input format JSON:
+{
+    {"id":"1",
+    "name":" farh "
+    
+    
+ }
+}
+Output format JSON:
+Output format JSON:
+status:200 OK
+time:3.51 s
+size:4.54 KB
+

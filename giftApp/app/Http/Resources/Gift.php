@@ -28,7 +28,7 @@ class Gift extends JsonResource
             ('warp_paper')=>$this->warp_paper,
             ('card')=>$this->card,
             ('created_at')=>$this->created_at->format('d/m/y'),
-            ('card')=>$this->updated_at->format('d/m/y'),
+            ('updated_at')=>$this->updated_at->format('d/m/y'),
 
 
 

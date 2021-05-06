@@ -62,6 +62,10 @@ Route::get('/email/verify/{id}/{hash}', [APIVerificationController::class, 'veri
 Route::resource('/gifts', 'API\GiftController'::class);
 
 
+//categorys route
+Route::resource('/categorys', 'API\CategoryController'::class);
+
+
 //order route
 Route::resource('/orders', 'API\OrderController'::class);
 
