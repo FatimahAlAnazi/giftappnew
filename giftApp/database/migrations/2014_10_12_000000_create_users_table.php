@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -22,11 +22,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
-            $table->string('utype')->default('user')->comment('user for customer and admin for admin');
-            $table->string('gender')->nullable();
-            $table->date('birthday')->format('d/m/Y')->nullable();
-            $table->integer('phone_number')->unique()->nullable();
-            $table->string('address')->nullable();
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class BassController extends Controller
 {
+    //BassController
     public function sendResponse($result, $message){
 
         $response = [

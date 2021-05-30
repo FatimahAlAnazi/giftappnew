@@ -30,7 +30,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 */
 
-Route::middleware(['auth:api'])->get('/user', function (Request $request) {
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
@@ -48,7 +48,7 @@ Route::post('/password/reset', [ResetPasswordController::class, 'reset']);
 
 Route::get('/verified-only', function (Request $request) {
     dd('you are verified', $request->user()->name);
-})->middleware('auth:api', 'verified');
+})->middleware('auth:sanctum', 'verified');
 
 //to send the verification email
 Route::get('/email/resend', [APIVerificationController::class, 'resend'])->name('verification.resend');
