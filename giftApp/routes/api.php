@@ -65,6 +65,10 @@ Route::resource('/gifts', 'API\GiftController'::class);
 //categorys route
 Route::resource('/categorys', 'API\CategoryController'::class);
 
+//cart route
+Route::resource('/cart', 'API\CartController'::class);
+
+
 
 //order route
 Route::resource('/orders', 'API\OrderController'::class);
