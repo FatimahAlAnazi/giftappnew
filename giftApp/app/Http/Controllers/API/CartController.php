@@ -10,6 +10,8 @@ use App\Http\Resources\Cart as CartResource;
 use App\Http\Controllers\API\BassController as BassController;
 use App\Models\API\Cart as APICart;
 
+
+
 class CartController extends BassController
 {
 // cartController
@@ -28,7 +30,9 @@ class CartController extends BassController
     public function index()
     {
         $cart=Cart::all();
-        return $this->sendResponse(CartResource::collection($cart),'All categorys');
+        return $this->sendResponse(CartResource::collection($cart),'All carts');
+        
+        
     }
 
     /**
@@ -119,11 +123,11 @@ class CartController extends BassController
             return $this->sendError('Your information is not correct', $validator->errors());
         }
         $cart->id=$input['id'];
-        $cart->name=$input['user_id'];
-        $cart->name=$input['gift_id'];
+        $cart->user_id=$input['user_id'];
+        $cart->gift_id=$input['gift_id'];
 
 
-        return $this->sendResponse(new CartResource($cart),' updated successfully ');
+        return $this->sendResponse(new CartResource($cart),'updated successfully');
     }
 
     /**

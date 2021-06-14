@@ -11,6 +11,7 @@ use App\Http\Controllers\API\ResetPasswordController;
 use App\Http\Controllers\API\ForgotPasswordController;
 use App\Http\Controllers\API\VerificationController as APIVerificationController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\API\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +67,7 @@ Route::resource('/gifts', 'API\GiftController'::class);
 Route::resource('/categorys', 'API\CategoryController'::class);
 
 //cart route
-Route::resource('/cart', 'API\CartController'::class);
+Route::resource('/carts', 'API\CartController'::class);
 
 
 
