@@ -13,7 +13,11 @@ class Cart extends Model
         'id', 'user_id', 'gift_id',
     ];
 
-
+    //relation with category
+    public function categorys()
+    {
+    	return $this->belongsTo(Category::class);
+    } 
 
 
 }
