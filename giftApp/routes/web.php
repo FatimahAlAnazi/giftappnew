@@ -44,4 +44,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 	//});
 //});
 
+Route::resource('/products', 'WEB\ProductController'::class);
+Route::resource('/categories', 'WEB\CategorieeController'::class);
+
+Route::resource('/customers', 'WEB\CustomerController'::class);
+
+
+
+
 

@@ -23,7 +23,7 @@ class Order extends JsonResource
             ('total_amount')=>$this->total_amount,
             ('bank_transaction_id')=>$this->bank_transaction_id,
             ('created_at')=>$this->created_at->format('d/m/y'),
-            ('card')=>$this->updated_at->format('d/m/y'),
+            ('updated_at')=>$this->updated_at->format('d/m/y'),
 
 
 
