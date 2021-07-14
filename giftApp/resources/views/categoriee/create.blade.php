@@ -15,13 +15,14 @@
 <div class="container" style="padding-top: 2%">
 <form action="{{ route('categories.store')}}" method="POST">
     @csrf
-        <div class="form-group">
-          <label for="exampleFormControlInput1">  categoriee </label>
-          <input type="text" name=" name" class="form-control"  placeholder="categoriee ">
+        <div class="form-group">    
+          <label for="exampleFormControlInput1">  id </label>    
+             
+          <input type="text" name=" id" class="form-control"  placeholder=" id ">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">  product_id </label>
-          <input type="text" name=" product_id" class="form-control"  placeholder=" product_id ">
+          <label for="exampleFormControlInput1">  name </label>
+          <input type="text" name=" name " class="form-control"  placeholder=" name ">
         </div>
         
         

@@ -40,15 +40,15 @@
    $i = 0;
   @endphp
 
-  @foreach($customer as $item)
+  @foreach($customers as $customer)
     <tr>
       <th scope="row">{{++$i}}</th>
 
-      <td>{{ $item->customer_name}}</td>
-      <td>{{ $item->location  }}</td>
-      <td> {{ $item->number_of_orders }} </td>
-      <td> {{ $item->total_of_orders}} </td>
-      <td> {{ $item->total_spending}} </td>
+      <td>{{ $customer->customer_name}}</td>
+      <td>{{ $customer->location  }}</td>
+      <td> {{ $customer->number_of_orders }} </td>
+      <td> {{ $customer->total_of_orders}} </td>
+      <td> {{ $customer->total_spending}} </td>
       
       
       
@@ -83,7 +83,7 @@
   </tbody>
 </table>
 
-{{ $customer->links() }}
+{{ $customers->links() }}
 
 </div>
 

@@ -68,7 +68,7 @@
     <a class="btn btn-primary" href=" {{ route('products.show',$item->id)}}">Show</a>
     </div>
     <div class="col-sm">
-    <form action="{{ route('products.destroy',$item->id)}}">
+    <form action="{{ route('products.destroy',$item->id)}}" method="POST">
       
       @csrf
       @method('DELETE')

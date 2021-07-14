@@ -167,6 +167,7 @@ return [
     | the cookie from being sent to you if it can not be done securely.
     |
     */
+    //env('SESSION_SECURE_COOKIE'),
 
     'secure' => env('SESSION_SECURE_COOKIE'),
 

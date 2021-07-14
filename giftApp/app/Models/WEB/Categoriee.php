@@ -11,13 +11,11 @@ class Categoriee extends Model
      
     protected $guarded = [];
 
-    protected $faillable =[  
+    protected $faillable =[  'id', 	' name',]; 	
 
           
         
-              'categoriee ',
-             'product_id',];
-        
+             
             
     
 }

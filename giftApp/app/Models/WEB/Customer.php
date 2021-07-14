@@ -11,12 +11,12 @@ class Customer extends Model
 
     protected $guarded = [];
 
+    
+    protected $primaryKey = ['Id'];
 
     protected $faillable =[  
-    'customer_name',
-    'location',
-    'number_of_orders',
-    'total_spending',
+   
+        'customer_name', 	'location', 	'number_of_orders', 	'total_spending', 
 
     ];
 

@@ -12,17 +12,17 @@ class MailController extends Controller
 
     public function sendEmail(request $request)
     {
-        /*
+        
         $input = $request->all();
         $validator = validator::make($input, [
             'email' => 'required|email',
         ]);
 
-        /*
+        
         if ($validator->fails()) {
             return $this->sendError('All fields are required', $validator->errors());
         }
-        */
+        
 
         $details = [
             'title' => 'Mail from Gift App - Game Development',

@@ -48,8 +48,3 @@ Route::resource('/products', 'WEB\ProductController'::class);
 Route::resource('/categories', 'WEB\CategorieeController'::class);
 
 Route::resource('/customers', 'WEB\CustomerController'::class);
-
-
-
-
-

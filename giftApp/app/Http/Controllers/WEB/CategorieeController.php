@@ -43,8 +43,9 @@ class CategorieeController extends Controller
     {
         $request->validate([
             
-            ('categoriee')=>'required',
-            ('product_id')=>'required',
+            ('id ')=>'required', 	
+            ('name')=>'required',
+            
 
         ]);
         $categoriee=Categoriee::create($request->all());
@@ -83,8 +84,8 @@ class CategorieeController extends Controller
     public function update(Request $request, Categoriee $categoriee)
     {
         $request->validate([
-            ('categoriee')=>'required',
-            ('product_id')=>'required',
+            ('id ')=>'required', 	
+            (' name')=>'required',
             
         ]);
         $categoriee->update($request->all());
@@ -97,7 +98,7 @@ class CategorieeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Categoriee $categoriee)
     {
         $categoriee->delete();
         return redirect()->route('categories.index')->with('succes','categoriee delete successiflly');

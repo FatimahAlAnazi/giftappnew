@@ -5,8 +5,7 @@ namespace App\Http\Controllers\WEB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\WEB\Customer;
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Pagination\Paginator;
+
 
 class CustomerController extends Controller
 {
@@ -18,8 +17,8 @@ class CustomerController extends Controller
     public function index()
     {
         
-        $customer = Customer::latest('customer')->paginate(5);
-        return view('customer.index',compact('customer'));
+        $customers = Customer::latest('customer')->paginate(5);
+        return view('customer.index',compact('customers'));
     }
 
     /**
@@ -29,7 +28,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('customer.create');
+       
     }
 
     /**
@@ -38,20 +37,12 @@ class CustomerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request )
+    public function store(Request $request  )
     {
-        $request->validate([
+       
             
             
 
-              'customer_name'=>'required',
-               'location'=>'required',
-              'number_of_orders'=>'required',
-               'total_spending'=>'required',
-
-        ]);
-        $customer=Customer::create($request->all());
-        return redirect()->route('customers.index')->with('succes','customer add successiflly');
     }
 
     /**
@@ -60,9 +51,9 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Customer $customer)
+    public function show()
     {
-        return view('customer.show',compact('customer'));
+       
     }
 
     /**
@@ -71,9 +62,9 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customer $customer )
+    public function edit( )
     {
-        return view('customer.edit',compact('customer'));
+       
     }
 
     /**
@@ -83,17 +74,9 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Customer $customer)
+    public function update(Request $request)
     {
-        $request->validate([
-            'customer_name'=>'required',
-            'location'=>'required',
-           'number_of_orders'=>'required',
-            'total_spending'=>'required',
-
-     ]);
-     $customer=Customer::update($request->all());
-     return redirect()->route('customers.index')->with('succes','customer add successiflly');
+       //
     }
 
     /**
@@ -102,9 +85,8 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy( $id)
     {
-        $customer->delete();
-        return redirect()->route('customers.index')->with('succes','customer delete successiflly');
+       //
     }
 }

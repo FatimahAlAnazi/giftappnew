@@ -23,11 +23,11 @@
   <thead>
     <tr>
 
-    <th scope="col">id </th>
-
+    
+    <th scope="col"> # </th>
      
-      <th scope="col">categoriee </th>
-      <th scope="col">product_id </th>
+      <th scope="col"> id </th>
+      <th scope="col"> name </th>
       
       
     </tr>
@@ -43,8 +43,8 @@
       <th scope="row">{{++$i}}</th>
 
      
-      <td>{{ $item->categoriee}}</td>
-      <td> {{ $item->product_id}} </td>
+      <td>{{ $item-> id}}</td>
+      <td> {{ $item-> name}} </td>
       
       
       
@@ -54,7 +54,7 @@
     <a class="btn btn-success" href="{{ route('categories.edit',$item->id)}}">Edit</a>
     </div>
     <div class="col-sm">
-    <a class="btn btn-primary" href=" {{ route('categories.show',$item->id)}}">Show</a>
+    <a class="btn btn-primary" href=" {{ route('categories.show',$item-> name)}}">Show</a>
     </div>
     <div class="col-sm">
     <form action="{{ route('categories.destroy',$item->id)}}">
